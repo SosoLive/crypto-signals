@@ -24,7 +24,7 @@ const Hero = () => {
 					<img src="/images/double_down_arrow.png" alt="" />
 				</button>
 				<lottie-player
-					src={rocket}
+					src="https://crytodreams.io/wp-content/uploads/2022/09/lf30_editor_qwyw85mi.json"
 					background="transparent"
 					speed="1"
 					style={{ width: '200px', height: '270px' }}
