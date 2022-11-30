@@ -4,7 +4,7 @@ import { membershipPlan } from 'config/membershipPlan'
 
 const MemberShip = () => {
 	return (
-		<section className="membership">
+		<section id="membership" className="membership">
 			<div className="title">
 				<div className="container">
 					<div className="introduction">

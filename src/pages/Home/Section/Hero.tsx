@@ -9,20 +9,22 @@ const Hero = () => {
 			<BackgroundSVG className="background-svg" />
 			<div className="container">
 				<img src="/images/logo.png" alt="Logo" className="logo" />
-				<h1>
+				<h1 className="appear-animation">
 					<span className="header-first-span">The Ultimate Trading Experience</span>
 					<br />
 					<span className="header-second-span">BEGINS. HERE.</span>
 				</h1>
-				<p>
+				<p className="appear-animation">
 					At Crypto Dreams, we consider ourselves as one of the leading Crypto teaching
 					platforms and North America's biggest Instagram community for crypto trading,
 					news, and knowledge.
 				</p>
-				<button>
-					JOIN CRYPTO DREAMS
-					<img src="/images/double_down_arrow.png" alt="" />
-				</button>
+				<a href="#membership" className="scale-appear-animation">
+					<button>
+						JOIN CRYPTO DREAMS
+						<img src="/images/double_down_arrow.png" alt="" />
+					</button>
+				</a>
 				<lottie-player
 					src="https://crytodreams.io/wp-content/uploads/2022/09/lf30_editor_qwyw85mi.json"
 					background="transparent"
@@ -30,6 +32,7 @@ const Hero = () => {
 					style={{ width: '200px', height: '270px' }}
 					loop
 					autoplay
+					className="move-up-animation"
 				></lottie-player>
 			</div>
 		</section>
