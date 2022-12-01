@@ -1,5 +1,6 @@
 import '@lottiefiles/lottie-player'
 import { ReactComponent as BackgroundSVG } from 'assets/icons/back-bottom.svg'
+import Rocket from 'assets/icons/rocket.svg'
 // import { rocket } from 'assets/lottie/rocket'
 
 const Hero = () => {
@@ -25,14 +26,7 @@ const Hero = () => {
 						<img src="/images/double_down_arrow.png" alt="" />
 					</button>
 				</a>
-				<lottie-player
-					src="https://cryptodreams.io/wp-content/uploads/2022/09/lf30_editor_qwyw85mi.json"
-					background="transparent"
-					speed="1"
-					style={{ width: '200px', height: '270px' }}
-					loop
-					autoplay
-				></lottie-player>
+				<img src={Rocket} alt="" className="rocket" />
 			</div>
 		</section>
 	)

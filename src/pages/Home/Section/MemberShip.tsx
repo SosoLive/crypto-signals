@@ -1,8 +1,12 @@
+import { useRef } from 'react'
+import { useInViewport } from 'react-in-viewport'
 import '@lottiefiles/lottie-player'
 import { ReactComponent as TickIcon } from '@material-icons/svg/svg/done/outline.svg'
 import { membershipPlan } from 'config/membershipPlan'
 
 const MemberShip = () => {
+	const partnerRef = useRef<HTMLDivElement>(null)
+	const partnerViewport = useInViewport(partnerRef)
 	return (
 		<section id="membership" className="membership">
 			<div className="title">
@@ -59,7 +63,14 @@ const MemberShip = () => {
 					<div className="ascending-arrow">
 						<img src="/images/ascending-arrow.png" alt="" />
 					</div>
-					<div className="partner">
+					<div
+						className={`partner ${
+							partnerViewport.inViewport &&
+							partnerViewport.enterCount === 1 &&
+							'animation'
+						}`}
+						ref={partnerRef}
+					>
 						<div className="partnered-with">
 							<h1>
 								Partnered With

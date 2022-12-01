@@ -49,6 +49,7 @@
       }
 
       h1 {
+        opacity: 0;
         margin-bottom: 20px;
 
         .header-first-span {
@@ -66,9 +67,13 @@
           font-weight: 500;
           color: #fff;
         }
+
+        @extend .fadeIn;
+        animation-delay: .2s;
       }
 
       p {
+        opacity: 0;
         margin: 20px 0 40px;
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
@@ -78,9 +83,13 @@
         @include media-sm {
           font-size: 16px;
         }
+
+        @extend .fadeIn;
+        animation-delay: .2s;
       }
 
       button {
+        opacity: 0;
         box-shadow: 0px -25px 0px -15px #fff;
         padding: 16px 28px;
         background-color: var(--background);
@@ -102,10 +111,18 @@
           background-color: #fff;
 
         }
+
+        @extend .fadeIn;
+        animation-delay: .2s;
       }
 
-      lottie-player {
+      .rocket {
+        opacity: 0;
         margin-top: 40px;
+        width: 200px;
+        height: 270px;
+        @extend .fadeInUp;
+        animation-delay: .2s;
       }
     }
 
@@ -138,6 +155,10 @@
         line-height: 1;
         font-family: 'Noto Sans Adlam', sans-serif;
         font-weight: 700;
+
+        &.animation {
+          @extend .fadeInDown
+        }
       }
 
       h5 {
@@ -146,6 +167,10 @@
         line-height: 1;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 300;
+
+        &.animation {
+          @extend .fadeInDown
+        }
       }
 
       h3 {
@@ -163,6 +188,24 @@
         @include media-sm {
           grid-template-columns: repeat(1, minmax(0, 1fr));
           row-gap: 12px;
+        }
+
+        h3 {
+          opacity: 0;
+        }
+
+        &.animation {
+          h3 {
+            @extend .fadeIn;
+          }
+
+          h3:nth-child(2) {
+            animation-delay: .3s;
+          }
+
+          h3:nth-child(3) {
+            animation-delay: .6s;
+          }
         }
       }
 
@@ -213,6 +256,20 @@
             .image img {
               width: 256px;
             }
+          }
+
+          &.animation {
+            .description {
+              @extend .fadeIn;
+            }
+
+            .image {
+              @extend .fadeInRight;
+            }
+          }
+
+          &:nth-child(2).animation .image {
+            @extend .fadeInLeft;
           }
         }
 
@@ -375,6 +432,7 @@
                 align-items: center;
                 gap: 4px;
                 font-size: 18px;
+                font-family: 'Times New Roman', Times, serif;
 
                 svg {
                   min-width: 15px;
@@ -503,6 +561,16 @@
             grid-template-columns: repeat(1, minmax(0, 1fr));
             gap: 24px;
           }
+
+          &.animation {
+            .partnered-with {
+              @extend .fadeInLeft;
+            }
+
+            .binance-logo {
+              @extend .fadeInRight;
+            }
+          }
         }
       }
     }
@@ -513,154 +581,166 @@
     padding-bottom: 12px;
     background-color: var(--theme);
 
-    h1 {
-      font-size: 36px;
-      font-family: "Noto Sans Adlam", sans-serif;
-      font-weight: 800;
-      color: #fff;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-      &.animation {
-        @extend .fadeIn;
-      }
-    }
+      h1 {
+        font-size: 36px;
+        font-family: "Noto Sans Adlam", sans-serif;
+        font-weight: 800;
+        color: #fff;
 
-    h5 {
-      font-size: 16px;
-      line-height: 20px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 300;
-      color: #fff;
-
-      &.animation {
-        @extend .fadeInUp;
-      }
-    }
-
-    .divider {
-      margin: 12px auto 0;
-      border-top: 4px solid #ffbf2180;
-      width: 190px;
-      height: 8px;
-      background-color: var(--background);
-    }
-
-    .contact-method {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 36px;
-
-      .item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        opacity: 0;
-        border: 1px solid #fff;
-        padding: 25px;
-
-        h2 {
-          margin-top: 20px;
-          font-size: 20px;
-          font-weight: 600;
-          color: #fff;
-        }
-
-        h5 {
-          font-size: 13px;
-        }
-
-        svg {
-          width: 25px;
-          height: 25px;
-          fill: var(--background);
-        }
-
-        &:hover {
-          border: 1px solid transparent;
+        &.animation {
+          @extend .fadeIn;
         }
       }
 
-      @include media-sm {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
+      h5 {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        color: #fff;
 
-      &.animation {
-        .item {
-          @extend .fadeInRight;
+        &.animation {
+          @extend .fadeInUp;
         }
       }
 
-      .item:nth-child(2) {
-        animation-delay: .3s;
+      .divider {
+        margin: 12px auto 0;
+        border-top: 4px solid #ffbf2180;
+        width: 190px;
+        height: 8px;
+        background-color: var(--background);
       }
 
-      .item:nth-child(3) {
-        animation-delay: .6s;
-      }
-    }
-
-    .contact-email {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-
-      .instagram {
+      .contact-method {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 36px;
+        max-width: 900px;
         width: 100%;
-        object-fit: cover;
-      }
 
-      .contact-us {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        padding: 32px 64px;
-        background-color: #fff;
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          opacity: 0;
+          border: 1px solid #fff;
+          padding: 25px;
 
-        input,
-        textarea,
-        button {
-          outline: none;
-          padding: 4px;
-          font-size: 13px;
-          font-family: 'Poppins', sans-serif;
+          h2 {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+          }
+
+          h5 {
+            font-size: 13px;
+          }
+
+          svg {
+            width: 25px;
+            height: 25px;
+            fill: var(--background);
+          }
+
+          &:hover {
+            border: 1px solid transparent;
+          }
         }
 
-        button {
-          margin-top: auto;
-          background-color: var(--background);
-          font-weight: 700;
+        @include media-sm {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
         }
 
-        @include media-xl {
-          padding: 16px;
+        &.animation {
+          .item {
+            @extend .fadeInRight;
+          }
+        }
+
+        .item:nth-child(2) {
+          animation-delay: .3s;
+        }
+
+        .item:nth-child(3) {
+          animation-delay: .6s;
         }
       }
 
-      @include media-sm {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
+      .contact-email {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 32px;
+        padding: 0px 8px;
+        max-width: 900px;
+        width: 100%;
 
-      &.animation {
         .instagram {
-          @extend .fadeInLeft;
+          width: 100%;
+          object-fit: cover;
         }
 
         .contact-us {
-          @extend .fadeInRight;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 20px 40px;
+          background-color: #fff;
+
+          input,
+          textarea,
+          button {
+            outline: none;
+            padding: 4px;
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+          }
+
+          button {
+            margin-top: auto;
+            background-color: var(--background);
+            font-weight: 700;
+          }
+
+          @include media-xl {
+            padding: 16px;
+          }
+        }
+
+        @include media-sm {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        &.animation {
+          .instagram {
+            @extend .fadeInLeft;
+          }
+
+          .contact-us {
+            @extend .fadeInRight;
+          }
         }
       }
-    }
 
-    .webengine {
-      display: flex;
-      justify-content: center;
-      margin: 24px 0 0;
+      .webengine {
+        display: flex;
+        justify-content: center;
+        margin: 24px 0 0;
 
-      a {
-        font-size: 16px;
-        font-family: 'Poppins', sans-serif;
-        color: var(--background);
+        a {
+          font-size: 16px;
+          font-family: 'Poppins', sans-serif;
+          color: var(--background);
+        }
       }
     }
   }
