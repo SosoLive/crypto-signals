@@ -18,6 +18,7 @@ body {
 
 .App {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
@@ -42,4 +43,8 @@ a:visited,
 a:active,
 a:hover {
   text-decoration: none;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
 }

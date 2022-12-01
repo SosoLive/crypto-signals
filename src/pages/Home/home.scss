@@ -49,7 +49,6 @@
       }
 
       h1 {
-        @extend .appear-animation;
         margin-bottom: 20px;
 
         .header-first-span {
@@ -70,7 +69,6 @@
       }
 
       p {
-        @extend .appear-animation;
         margin: 20px 0 40px;
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
@@ -83,7 +81,6 @@
       }
 
       button {
-        @extend .scale-appear-animation;
         box-shadow: 0px -25px 0px -15px #fff;
         padding: 16px 28px;
         background-color: var(--background);
@@ -108,7 +105,6 @@
       }
 
       lottie-player {
-        @extend .move-up-animation;
         margin-top: 40px;
       }
     }
@@ -474,10 +470,6 @@
           margin: 60px 0 30px;
 
           .partnered-with {
-            &:visited {
-              @extend .appear-animation;
-            }
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -526,6 +518,10 @@
       font-family: "Noto Sans Adlam", sans-serif;
       font-weight: 800;
       color: #fff;
+
+      &.animation {
+        @extend .fadeIn;
+      }
     }
 
     h5 {
@@ -534,6 +530,10 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
       color: #fff;
+
+      &.animation {
+        @extend .fadeInUp;
+      }
     }
 
     .divider {
@@ -554,6 +554,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        opacity: 0;
         border: 1px solid #fff;
         padding: 25px;
 
@@ -581,6 +582,20 @@
 
       @include media-sm {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      &.animation {
+        .item {
+          @extend .fadeInRight;
+        }
+      }
+
+      .item:nth-child(2) {
+        animation-delay: .3s;
+      }
+
+      .item:nth-child(3) {
+        animation-delay: .6s;
       }
     }
 
@@ -624,6 +639,16 @@
 
       @include media-sm {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      &.animation {
+        .instagram {
+          @extend .fadeInLeft;
+        }
+
+        .contact-us {
+          @extend .fadeInRight;
+        }
       }
     }
 
