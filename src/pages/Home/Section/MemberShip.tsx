@@ -34,7 +34,7 @@ const MemberShip = () => {
 				<div className="container">
 					<div className="membership-plans">
 						{membershipPlan.map((plan) => (
-							<div className="membership-plan">
+							<div className="membership-plan" key={plan.type}>
 								<h3 className="type">{plan.type}</h3>
 								<h1>
 									<span className="currency">$</span>&nbsp;
