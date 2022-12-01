@@ -43,7 +43,7 @@ const MemberShip = () => {
 								</h1>
 								<div className="detail-list">
 									{plan.content.map((detail) => (
-										<div className="detail">
+										<div className="detail" key={detail}>
 											<TickIcon />
 											<p>{detail}</p>
 										</div>
