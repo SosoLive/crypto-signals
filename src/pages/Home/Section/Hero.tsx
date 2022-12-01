@@ -26,7 +26,7 @@ const Hero = () => {
 					</button>
 				</a>
 				<lottie-player
-					src="https://crytodreams.io/wp-content/uploads/2022/09/lf30_editor_qwyw85mi.json"
+					src="https://cryptodreams.io/wp-content/uploads/2022/09/lf30_editor_qwyw85mi.json"
 					background="transparent"
 					speed="1"
 					style={{ width: '200px', height: '270px' }}

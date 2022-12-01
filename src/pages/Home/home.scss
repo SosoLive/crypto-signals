@@ -108,7 +108,7 @@
       }
 
       lottie-player {
-        // @extend .move-up-animation;
+        @extend .move-up-animation;
         margin-top: 40px;
       }
     }
@@ -410,6 +410,10 @@
               font-family: 'Montserrat', sans-serif;
               font-weight: 500;
               color: #fff;
+
+              &:hover {
+                background-color: black;
+              }
             }
 
             .popular {
@@ -470,6 +474,10 @@
           margin: 60px 0 30px;
 
           .partnered-with {
+            &:visited {
+              @extend .appear-animation;
+            }
+
             display: flex;
             align-items: center;
             justify-content: center;
