@@ -1,6 +1,6 @@
 import '@lottiefiles/lottie-player'
 import { ReactComponent as BackgroundSVG } from 'assets/icons/back-bottom.svg'
-import { rocket } from 'assets/lottie/rocket'
+// import { rocket } from 'assets/lottie/rocket'
 
 const Hero = () => {
 	return (
@@ -9,17 +9,17 @@ const Hero = () => {
 			<BackgroundSVG className="background-svg" />
 			<div className="container">
 				<img src="/images/logo.png" alt="Logo" className="logo" />
-				<h1 className="appear-animation">
+				<h1>
 					<span className="header-first-span">The Ultimate Trading Experience</span>
 					<br />
 					<span className="header-second-span">BEGINS. HERE.</span>
 				</h1>
-				<p className="appear-animation">
+				<p>
 					At Crypto Dreams, we consider ourselves as one of the leading Crypto teaching
 					platforms and North America's biggest Instagram community for crypto trading,
 					news, and knowledge.
 				</p>
-				<a href="#membership" className="scale-appear-animation">
+				<a href="#membership">
 					<button>
 						JOIN CRYPTO DREAMS
 						<img src="/images/double_down_arrow.png" alt="" />
@@ -32,7 +32,6 @@ const Hero = () => {
 					style={{ width: '200px', height: '270px' }}
 					loop
 					autoplay
-					className="move-up-animation"
 				></lottie-player>
 			</div>
 		</section>

@@ -30,6 +30,7 @@ const MemberShip = () => {
 				</div>
 			</div>
 			<div className="content">
+				<div className="polygon" />
 				<div className="container">
 					<div className="membership-plans">
 						{membershipPlan.map((plan) => (
