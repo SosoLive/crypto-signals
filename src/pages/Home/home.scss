@@ -237,6 +237,10 @@
             img {
               margin: auto;
               width: 256px;
+
+              &:hover {
+                scale: 1.1;
+              }
             }
           }
 
@@ -554,6 +558,10 @@
             img {
               width: 200px;
               height: 144px;
+
+              &:hover {
+                scale: 1.1;
+              }
             }
           }
 
@@ -729,6 +737,15 @@
             @extend .fadeInRight;
           }
         }
+
+        .instagram,
+        .contact-us {
+          &:hover {
+            scale: 1.04;
+          }
+        }
+
+        ;
       }
 
       .webengine {
