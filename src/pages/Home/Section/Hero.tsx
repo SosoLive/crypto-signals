@@ -4,6 +4,11 @@ import Rocket from 'assets/icons/rocket.svg'
 // import { rocket } from 'assets/lottie/rocket'
 
 const Hero = () => {
+	const handleJoin = () => {
+		const element = document.getElementById('membership')
+		element?.scrollIntoView({ behavior: 'smooth' })
+	}
+
 	return (
 		<section className="hero">
 			<img src="/images/background.png" alt="Background" className="background" />
@@ -20,12 +25,10 @@ const Hero = () => {
 					platforms and North America's biggest Instagram community for crypto trading,
 					news, and knowledge.
 				</p>
-				<a href="#membership">
-					<button>
-						JOIN CRYPTO DREAMS
-						<img src="/images/double_down_arrow.png" alt="" />
-					</button>
-				</a>
+				<button onClick={handleJoin}>
+					JOIN CRYPTO DREAMS
+					<img src="/images/double_down_arrow.png" alt="" />
+				</button>
 				<img src={Rocket} alt="" className="rocket" />
 			</div>
 		</section>
